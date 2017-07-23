@@ -1,0 +1,4 @@
+<h1>Memo</h1>
+
+<memo-list [selectedMemo]="selectedMemo" (select)="selectedMemo = $event"></memo-list>
+<memo-detail [memo]="selectedMemo" (remove)="removeSelected()"></memo-detail>

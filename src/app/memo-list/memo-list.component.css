@@ -1,0 +1,28 @@
+.memos {
+    list-style: none;
+    padding-left: 0;
+}
+
+.memos .memo {
+    padding: 5px;
+    border: 2px solid grey;
+}
+
+.memos .memo.selected {
+    background-color: lightblue;
+}
+
+.memos .memo + .memo {
+    border-top-width: 0px;
+}
+
+.memos .memo .title {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.memos .memo .content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

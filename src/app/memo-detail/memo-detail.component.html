@@ -1,0 +1,8 @@
+<div *ngIf="memo">
+    <nav>
+        <input [(ngModel)]="memo.title" (ngModelChange)="save()" placeholder="제목을 입력하세요">
+        <button (click)="delete()">Delete</button>
+    </nav>
+
+    <textarea [(ngModel)]="memo.content" (ngModelChange)="save()" rows="20" placeholder="내용을 입력하세요"></textarea>
+</div>

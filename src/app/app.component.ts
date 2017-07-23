@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
 
+import { Memo } from './memo'
+import { MemoService } from './memo.service'
+
 @Component({
   selector: 'app-root',
-  template: `
-    <h1>
-      Welcome to {{title}}!!
-    </h1>
-  `,
-  styles: []
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app';
+  selectedMemo: Memo
+
+  constructor(private memoService: MemoService) {}
+
+  removeSelected() {
+    this.memoService.remove(this.selectedMemo)
+    this.selectedMemo = null
+  }
 }
