@@ -1,4 +1,8 @@
-<h1>Memo</h1>
+<h2 class="title">Memo</h2>
 
-<memo-list [selectedMemo]="selectedMemo" (select)="selectedMemo = $event"></memo-list>
-<memo-detail [memo]="selectedMemo" (remove)="removeSelected()"></memo-detail>
+<nav>
+    <a routerLinkActive="active" routerLink="/list">List</a>
+    <a (click)="create()">New</a>
+</nav>
+
+<router-outlet></router-outlet>

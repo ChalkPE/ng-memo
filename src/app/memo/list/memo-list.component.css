@@ -4,16 +4,22 @@
 }
 
 .memos .memo {
-    padding: 5px;
-    border: 2px solid grey;
+    padding: 0.6em;
+    border: 0.15em solid grey;
+    transition: all 0.3s ease;
 }
 
-.memos .memo.selected {
-    background-color: lightblue;
+.memos .memo:hover {
+    background-color: lightsteelblue;
 }
 
 .memos .memo + .memo {
-    border-top-width: 0px;
+    border-top-width: 0;
+}
+
+.memos .memo .id {
+    float: right;
+    color: darkgrey;
 }
 
 .memos .memo .title {

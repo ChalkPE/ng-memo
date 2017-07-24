@@ -1,0 +1,10 @@
+<span *ngIf="memos.length; else noMemos">현재 메모 {{ memos.length }}개</span>
+<ng-template #noMemos>메모가 없어요!</ng-template>
+
+<ul class="memos">
+    <li class="memo" *ngFor="let memo of memos" (click)="goto(memo)">
+        <span class="id">#{{ memo.id }}</span>
+        <div class="title">{{ memo.title || "(제목 없음)" }}</div>
+        <div class="content">{{ memo.content || "(내용 없음)" }}</div>
+    </li>
+</ul>

@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
+import { Router }    from '@angular/router';
 
-import { Memo } from './memo'
-import { MemoService } from './memo.service'
+import { Memo } from './memo/memo'
+import { MemoService } from './memo/memo.service'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedMemo: Memo
+  constructor(
+    private router: Router,
+    private memoService: MemoService
+  ) {}
 
-  constructor(private memoService: MemoService) {}
-
-  removeSelected() {
-    this.memoService.remove(this.selectedMemo)
-    this.selectedMemo = null
+  create() {
+    const memo = this.memoService.add()
+    this.router.navigate(['/detail', memo.id])
   }
 }
