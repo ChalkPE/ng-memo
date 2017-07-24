@@ -9,8 +9,7 @@ import { MemoService } from '../memo.service'
 
 @Component({
     selector: 'memo-detail',
-    templateUrl: './memo-detail.component.html',
-    styleUrls: ['./memo-detail.component.css']
+    templateUrl: './memo-detail.component.html'
 })
 export class MemoDetailComponent implements OnInit {
     memo: Memo

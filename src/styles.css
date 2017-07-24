@@ -4,6 +4,24 @@
   font-family: 'Spoqa Han Sans', Arial, Helvetica, sans-serif;
 }
 
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, textarea {
+  padding: 0.3em 0.5em;
+
+  border: 0.15em solid whitesmoke;
+  border-radius: 0.5em;
+
+  transition: all 0.5s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: slategrey;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -18,19 +36,6 @@ nav {
 
 nav input {
   flex: 1;
-}
-
-input, textarea {
-  padding: 0.3em 0.5em;
-
-  border: 0.15em solid whitesmoke;
-  border-radius: 0.5em;
-
-  transition: all 0.5s ease;
-}
-
-input:focus, textarea:focus {
-  border-color: slategrey;
 }
 
 nav input:not(:first-child) {
@@ -59,4 +64,14 @@ nav a.active:hover {
 
 nav *:not(:first-child) {
   margin-left: 0.5em;
-} 
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.id {
+    color: darkgrey;
+}
