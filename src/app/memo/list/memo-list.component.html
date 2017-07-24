@@ -1,4 +1,4 @@
-<span *ngIf="memos.length; else noMemos">현재 메모 {{ memos.length }}개</span>
+<h3 *ngIf="memos.length; else noMemos">현재 메모 {{ memos.length }}개</h3>
 <ng-template #noMemos>메모가 없어요!</ng-template>
 
 <ul class="memos">

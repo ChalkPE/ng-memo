@@ -32,6 +32,8 @@ export class MemoDetailComponent implements OnInit {
     }
 
     delete() {
+        if (!confirm(`정말로 ${this.memo.id}번 메모를 지우시겠어요?`)) return
+
         this.memoService.remove(this.memo)
         this.goBack()
     }
