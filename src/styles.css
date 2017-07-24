@@ -5,19 +5,43 @@
 }
 
 nav {
-    border: 0.15em solid whitesmoke;
-    border-radius: 0.5em;
-    margin-bottom: 1.2em;
-    padding: 0.5em 1em;
-    background-color: white;
-    box-shadow: 0px 0px 10px whitesmoke;
+  display: flex;
+  align-items: center;
+
+  border: 0.15em solid whitesmoke;
+  border-radius: 0.5em;
+  margin-bottom: 1.2em;
+  padding: 0.5em 1em;
+  background-color: white;
+  box-shadow: 0px 0px 10px whitesmoke;
+}
+
+nav input {
+  flex: 1;
+}
+
+input, textarea {
+  padding: 0.3em 0.5em;
+
+  border: 0.15em solid whitesmoke;
+  border-radius: 0.5em;
+
+  transition: all 0.5s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: slategrey;
+}
+
+nav input:not(:first-child) {
+  margin-left: 1em;
 }
 
 nav a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: slategrey;
-    transition: color 0.2s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: slategrey;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -25,8 +49,8 @@ nav a:hover {
 }
 
 nav a.active {
-    font-weight: bold;
-    color: steelblue;
+  font-weight: bold;
+  color: steelblue;
 }
 
 nav a.active:hover {
@@ -34,5 +58,5 @@ nav a.active:hover {
 }
 
 nav *:not(:first-child) {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 } 

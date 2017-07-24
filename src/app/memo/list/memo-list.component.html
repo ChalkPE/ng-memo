@@ -4,7 +4,7 @@
 <ul class="memos">
     <li class="memo" *ngFor="let memo of memos" (click)="goto(memo)">
         <span class="id">#{{ memo.id }}</span>
-        <div class="title">{{ memo.title || "(제목 없음)" }}</div>
-        <div class="content">{{ memo.content || "(내용 없음)" }}</div>
+        <div class="ellipsis title">{{ memo.title || "(제목 없음)" }}</div>
+        <div class="ellipsis">{{ memo.content || "(내용 없음)" }}</div>
     </li>
 </ul>
